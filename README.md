@@ -27,12 +27,8 @@ Diffusion 기반 대형 언어 모델(Diffusion LLM)이 생산 스케줄링 최�
 │ ├── 02_data_converter.ipynb
 │ ├── 03_finetune_llm.ipynb
 │ └── 04_evaluation.ipynb
-├── data/
-│ ├── train/
-│ └── test/
 ├── experiments/ # 추가 실험용 코드
-├── models/ # 파인튜닝된 모델
-├── results/ # 생성 결과 및 평가 파일
+├── results/ # 생성 결과 및 최종 결과물
 └── README.md
 ```
 
@@ -90,21 +86,19 @@ Diffusion 기반 대형 언어 모델(Diffusion LLM)이 생산 스케줄링 최�
 - **Load Variance** – 기계별 총 작업량 분산  
 - **Composite Score** – 두 지표를 종합한 점수로 계산  
 
-\[
-\text{Score} = \alpha \cdot \text{F1} + (1 - \alpha) \cdot (1 - \text{LoadVariance\_Norm})
-\]
-(여기서 \(\alpha = 0.5\))
+```
+**Score = 0.5 × F1 + (1 - 0.5) × (1 - LoadVariance_Norm)**
+```
 
 
 
 
-
-🧪 추가 실험
+🧪 ### 추가 실험  
 experiments/ 디렉토리에는 다양한 하이퍼파라미터, 프롬프트 구성, 샘플링 전략 실험들이 포함되어 있습니다.  
   
 
 
-🔭 향후 연구 방향
+🔭 ### 향후 연구 방향  
 - 실제 제조 데이터 기반으로 실험 확장
 
 - 다목적 스케줄링 (납기, 비용, 에너지 등 동시 고려)
@@ -112,7 +106,7 @@ experiments/ 디렉토리에는 다양한 하이퍼파라미터, 프롬프트 �
 - 시뮬레이션 기반 평가 및 강화학습(RL) 접목
 
   
-👨‍💻 기여자  
+👨‍💻 ### 기여자  
   
 Team김노박 : 박상선, 김영만, 노규범  
   
