@@ -27,12 +27,8 @@ Diffusion 기반 대형 언어 모델(Diffusion LLM)이 생산 스케줄링 최�
 │ ├── 02_data_converter.ipynb
 │ ├── 03_finetune_llm.ipynb
 │ └── 04_evaluation.ipynb
-├── data/
-│ ├── train/
-│ └── test/
 ├── experiments/ # 추가 실험용 코드
-├── models/ # 파인튜닝된 모델
-├── results/ # 생성 결과 및 평가 파일
+├── results/ # 생성 결과 및 최종 결과물
 └── README.md
 ```
 
@@ -94,6 +90,9 @@ Diffusion 기반 대형 언어 모델(Diffusion LLM)이 생산 스케줄링 최�
 \text{Score} = \alpha \cdot \text{F1} + (1 - \alpha) \cdot (1 - \text{LoadVariance\_Norm})
 \]
 (여기서 \(\alpha = 0.5\))
+
+![score formula](https://latex.codecogs.com/png.image?\dpi{150}\large\text{Score}=\alpha\cdot\text{F1}+(1-\alpha)\cdot(1-\text{LoadVariance\_Norm}))
+
 
 
 
